@@ -1,5 +1,6 @@
 import { css, html, LitElement } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
+import './counter.js';
 
 @customElement('hello-world')
 export class HelloWorld extends LitElement {
@@ -23,17 +24,10 @@ export class HelloWorld extends LitElement {
   @property()
   name = '';
 
-  @state()
-  count = 0;
-
-  handleClick() {
-    this.count++;
-  }
-
   render() {
     return html`
       <div>hello ${this.name}</div>
-      <button @click=${this.handleClick} >count: ${this.count}</button>
+      <counter-component></counter-component>
     `;
   }
 }
