@@ -1,0 +1,33 @@
+{
+  "name": "@herm-studio/web-component",
+  "description": "Herm Studio Web Component",
+  "license": "MIT",
+  "author": "Herm Studio",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "exports": {
+    "./react": "./dist/src/react.js"
+  },
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "tsc && tsc --watch --preserveWatchOutput",
+    "build": "tsc && npm run analyze -- --exclude dist",
+    "prepublish": "tsc && npm run analyze -- --exclude dist"
+  },
+  "dependencies": {
+    "@lit/react": "^1.0.6",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@types/react": "^18.3.12",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
+  },
+  "customElements": "custom-elements.json",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

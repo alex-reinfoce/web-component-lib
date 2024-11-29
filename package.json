@@ -1,0 +1,12 @@
+{
+  "name": "web-component",
+  "version": "0.0.1",
+  "scripts": {
+    "dev:component": "pnpm --filter web-component start",
+    "dev:react": "pnpm --filter react-playground dev",
+    "dev": "concurrently \"pnpm run dev:component\" \"pnpm run dev:react\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
