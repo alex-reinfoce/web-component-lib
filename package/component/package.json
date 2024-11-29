@@ -1,8 +1,7 @@
 {
-  "name": "@herm-studio/web-component",
-  "description": "Herm Studio Web Component",
+  "name": "web-component",
   "license": "MIT",
-  "author": "Herm Studio",
+  "author": "alex-reforince",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/src/index.js",
