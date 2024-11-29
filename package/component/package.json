@@ -7,7 +7,8 @@
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
-    "./react": "./dist/src/react.js"
+    "./react": "./dist/src/react.js",
+    "./vue": "./dist/src/vue.js"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",
@@ -27,6 +28,7 @@
   },
   "customElements": "custom-elements.json",
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "vue": "^3.5.13"
   }
 }

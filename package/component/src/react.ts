@@ -1,9 +1,9 @@
 import { createComponent } from "@lit/react";
 import React from "react";
-import { HelloWorld } from "./component/hello-world.js";
+import { HelloWorld as HelloWorldElement } from "./component/hello-world.js";
 
-export const ReactHelloWorld = createComponent({
+export const HelloWorld = createComponent({
   tagName: 'hello-world',
-  elementClass: HelloWorld,
+  elementClass: HelloWorldElement,
   react: React,
 });

@@ -17,12 +17,18 @@ importers:
       '@lit/react':
         specifier: ^1.0.6
         version: 1.0.6(@types/react@18.3.12)
+      '@vue/lit':
+        specifier: ^0.0.2
+        version: 0.0.2
       lit:
         specifier: ^3.1.4
         version: 3.2.1
       react:
         specifier: ^18.2.0
         version: 18.3.1
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.7.2)
     devDependencies:
       '@custom-elements-manifest/analyzer':
         specifier: ^0.10.3
@@ -88,6 +94,9 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
+      web-component:
+        specifier: workspace:*
+        version: link:../component
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
@@ -669,6 +678,9 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  '@vue/lit@0.0.2':
+    resolution: {integrity: sha512-27rF543iR0jgGxO1BthFQxzx/DWmVrcBb4iSmsFvD/kurCoCM/Ytkf3G8jMsYC7dbK3CiMDuAMyEYs/9e+Fbqg==}
 
   '@vue/reactivity@3.5.13':
     resolution: {integrity: sha512-NaCwtw8o48B9I6L1zl2p41OHo/2Z4wqYGGIK1Khu5T7yxrn+ATOixn/Udn2m+6kZKB/J7cuT9DbWWhRxqixACg==}
@@ -2002,6 +2014,8 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
+  '@vue/lit@0.0.2': {}
+
   '@vue/reactivity@3.5.13':
     dependencies:
       '@vue/shared': 3.5.13
@@ -2023,6 +2037,12 @@ snapshots:
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
       vue: 3.5.13(typescript@5.6.3)
+
+  '@vue/server-renderer@3.5.13(vue@3.5.13(typescript@5.7.2))':
+    dependencies:
+      '@vue/compiler-ssr': 3.5.13
+      '@vue/shared': 3.5.13
+      vue: 3.5.13(typescript@5.7.2)
 
   '@vue/shared@3.5.13': {}
 
@@ -2700,6 +2720,16 @@ snapshots:
       '@vue/shared': 3.5.13
     optionalDependencies:
       typescript: 5.6.3
+
+  vue@3.5.13(typescript@5.7.2):
+    dependencies:
+      '@vue/compiler-dom': 3.5.13
+      '@vue/compiler-sfc': 3.5.13
+      '@vue/runtime-dom': 3.5.13
+      '@vue/server-renderer': 3.5.13(vue@3.5.13(typescript@5.7.2))
+      '@vue/shared': 3.5.13
+    optionalDependencies:
+      typescript: 5.7.2
 
   which@2.0.2:
     dependencies:
