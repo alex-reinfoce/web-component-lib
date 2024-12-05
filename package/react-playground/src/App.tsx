@@ -1,4 +1,4 @@
-import "component/button";
+import 'component/button'
 import "./App.css";
 
 function App() {

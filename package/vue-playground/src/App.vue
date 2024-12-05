@@ -5,6 +5,6 @@ import 'component/button';
 <template>
   <div>
     <h1>Vue Playground</h1>
-    <web-button />
+    <web-button  />
   </div>
 </template>

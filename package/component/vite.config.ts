@@ -29,13 +29,13 @@ export default defineConfig({
       rollupTypes: false,
       include: ['src/**/*.ts'],
       exclude: ['**/*.stories.ts'],
-    })
+    }),
   ],
   build: {
     lib: {
       entry,
       formats: ['es'],
-      fileName: (format, entryName) => `${entryName}.js`
+      fileName: (_, entryName) => `${entryName}.js`
     }
   }
 });

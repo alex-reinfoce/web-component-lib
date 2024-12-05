@@ -1,13 +1,13 @@
+export * from './type'
+
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-interface WebButtonProps {
-  label: string
-}
+
 
 @customElement('web-button')
 export class WebButton extends LitElement {
-  @property() label: string = 'click me'
+  @property({ type: String }) label = 'click me'
 
   render() {
     return html`
@@ -18,10 +18,3 @@ export class WebButton extends LitElement {
   }
 }
 
-declare module 'react' {
-  namespace JSX {
-    interface IntrinsicElements {
-      'web-button': WebButtonProps;
-    }
-  }
-}
