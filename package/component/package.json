@@ -1,34 +1,43 @@
 {
-  "name": "web-component",
-  "license": "MIT",
-  "author": "alex-reforince",
-  "version": "0.0.1",
+  "name": "component",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
-  "exports": {
-    "./react": "./dist/src/react.js",
-    "./vue": "./dist/src/vue.js"
-  },
   "scripts": {
-    "analyze": "cem analyze --litelement",
-    "start": "tsc && tsc --watch --preserveWatchOutput",
-    "build": "tsc && npm run analyze -- --exclude dist",
-    "prepublish": "tsc && npm run analyze -- --exclude dist"
+    "dev": "storybook dev -p 6006",
+    "build": "tsc && vite build",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@lit/react": "^1.0.6",
-    "lit": "^3.1.4"
+    "lit": "^3.2.1"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-essentials": "^8.4.6",
+    "@storybook/blocks": "^8.4.6",
+    "@storybook/test": "^8.4.6",
+    "@storybook/web-components": "^8.4.6",
+    "@storybook/web-components-vite": "^8.4.6",
     "@types/react": "^18.3.12",
-    "tslib": "^2.6.3",
-    "typescript": "^5.5.3"
+    "storybook": "^8.4.6",
+    "tslib": "^2.8.1",
+    "typescript": "~5.4.2",
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0"
   },
-  "customElements": "custom-elements.json",
   "peerDependencies": {
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "vue": "^3.5.13"
+  },
+  "exports": {
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    },
+    "./vue": {
+      "types": "./dist/vue.d.ts",
+      "import": "./dist/vue.js"
+    }
   }
 }

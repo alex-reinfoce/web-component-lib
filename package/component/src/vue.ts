@@ -1,11 +1,8 @@
 import { defineComponent, h } from "vue";
-import "./component/hello-world.js";
+import './component/button/index'
 
-export const HelloWorld = defineComponent({
-  props: {
-    name: String,
+export const Button = defineComponent({
+  setup() {
+    return () => h("web-button");
   },
-  setup(props) {
-    return () => h('hello-world', { name: props.name })
-  }
 });

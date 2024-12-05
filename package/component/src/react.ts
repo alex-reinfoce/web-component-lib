@@ -1,9 +1,9 @@
 import { createComponent } from "@lit/react";
 import React from "react";
-import { HelloWorld as HelloWorldElement } from "./component/hello-world.js";
+import { WebButton } from "./component/button/index";
 
-export const HelloWorld = createComponent({
-  tagName: 'hello-world',
-  elementClass: HelloWorldElement,
+export const Button = createComponent({
+  tagName: "web-button",
+  elementClass: WebButton,
   react: React,
 });
