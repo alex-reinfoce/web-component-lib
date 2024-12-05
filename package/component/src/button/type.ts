@@ -1,5 +1,4 @@
 interface WebButtonProps {
-  label?: string
 }
 
 declare module 'react' {

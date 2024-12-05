@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <h1>React Playground</h1>
-      <web-button label="Click me" />
+      <web-button>Hello React</web-button>
     </div>
   );
 }

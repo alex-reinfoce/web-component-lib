@@ -2,6 +2,7 @@
   "name": "web-component",
   "version": "0.0.1",
   "scripts": {
+    "dev": "pnpm --filter component dev",
     "build:component": "pnpm --filter component build",
     "dev:react": "pnpm --filter react-playground dev",
     "dev:vue": "pnpm --filter vue-playground dev",

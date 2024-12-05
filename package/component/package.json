@@ -32,7 +32,7 @@
   },
   "exports": {
     "./button": {
-      "types": "./dist/button.d.ts",
+      "types": "./dist/button/button.d.ts",
       "import": "./dist/button.js"
     }
   }

@@ -7,13 +7,13 @@ import pkg from './package.json'
 const __dirname = path.resolve()
 const files = fs.readdirSync(`${__dirname}/src`)
 
-const entry = files.map(file => ({
+const entry = files.filter(file => !file.endsWith('style.ts')).map(file => ({
   [file.replace('.ts', '')]: `./src/${file}/${file}.ts`
 })).reduce((acc, cur) => ({ ...acc, ...cur }), {})
 
 const exports = Object.keys(entry).reduce((acc, cur) => ({
   ...acc, [`./${cur}`]: {
-    types: `./dist/${cur}.d.ts`,
+    types: `./dist/${cur}/${cur}.d.ts`,
     import: `./dist/${cur}.js`
   }
 }), {})
