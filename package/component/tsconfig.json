@@ -20,14 +20,12 @@
     "noEmit": false,
     "outDir": "./dist",
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ],
-  "types": [
-    "dist/types"
+    "src/**/*.ts"
   ]
 }

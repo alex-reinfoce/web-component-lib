@@ -1,5 +1,5 @@
 import { html } from "lit";
-import "./index.js";
+import "./button.js";
 import { Meta, StoryObj } from "@storybook/web-components";
 
 const meta = {

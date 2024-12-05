@@ -1,11 +1,11 @@
-import { Button } from "component/react";
+import "component/button";
 import "./App.css";
 
 function App() {
   return (
     <div>
       <h1>React Playground</h1>
-      <Button />
+      <web-button label="Click me" />
     </div>
   );
 }

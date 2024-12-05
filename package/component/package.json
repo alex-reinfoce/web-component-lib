@@ -9,10 +9,10 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@lit/react": "^1.0.6",
-    "lit": "^3.2.1"
+    "lit": "^3.1.4"
   },
   "devDependencies": {
+    "@vue/runtime-core": "^3.5.13",
     "@chromatic-com/storybook": "^3.2.2",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/blocks": "^8.4.6",
@@ -31,13 +31,9 @@
     "vue": "^3.5.13"
   },
   "exports": {
-    "./react": {
-      "types": "./dist/react.d.ts",
-      "import": "./dist/react.js"
-    },
-    "./vue": {
-      "types": "./dist/vue.d.ts",
-      "import": "./dist/vue.js"
+    "./button": {
+      "types": "./dist/button.d.ts",
+      "import": "./dist/button.js"
     }
   }
 }
